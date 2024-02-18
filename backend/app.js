@@ -14,6 +14,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cookieParser());
+
 app.use("/",(req,res)=>{
   res.json("welcome to ecommerce api");
 })
