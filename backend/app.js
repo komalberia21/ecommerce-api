@@ -15,13 +15,12 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
-app.use("/",(req,res)=>{
-  res.json("welcome to ecommerce api");
-})
-
 // configure routes
 app.use("/api/ecommerce", productRoutes);
 // errorHandlerMiddleware
+app.use("/",(req,res)=>{
+  res.json("welcome to ecommerce api");
+})
 app.use(errorHandlerMiddleware);
 
 export default app;
